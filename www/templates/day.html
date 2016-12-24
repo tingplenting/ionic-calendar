@@ -1,0 +1,16 @@
+<ion-view>
+
+<ion-nav-title>{{dayDay | date:'EEE, dd MMM yyyy'}}</ion-nav-title>
+<ion-nav-buttons side="right">
+	<button class="button button-icon ion-android-more-vertical"
+			ng-click="popover.show($event)">
+	</button>
+</ion-nav-buttons>
+<ion-content id="content"
+			 on-swipe-right="onSwipeRight()"
+			 on-swipe-left="onSwipeLeft()">
+<div class="list">
+	<div class="item">{{dayDay | date:'EEE, dd MMM yyyy'}}<span class="item-note">{{dayDay}}</span></div>
+</div>
+</ion-content>
+</ion-view>
