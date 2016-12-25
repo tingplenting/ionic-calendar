@@ -34,13 +34,13 @@ function dayCtrl (scope,Service) {
 
 	scope.onSwipeLeft = function() {
 		countGesture++;
-		Service.slideInSmooth();
+		Service.slideInSmooth('#content-d');
 		scope.dayDay = hariHari(countGesture);
 	}
 
 	scope.onSwipeRight =function() {
 		countGesture--;
-		Service.slideInSmooth();
+		Service.slideInSmooth('#content-d');
 		scope.dayDay = hariHari(countGesture);
 	}
 
@@ -74,14 +74,14 @@ function monthCtrl (scope,Service) {
 
 	scope.onSwipeLeft = function() {
 		countGesture++;
-		Service.slideInSmooth();
+		Service.slideInSmooth('#content-m');
 		scope.monthMonth = bulanBulan(countGesture);
 		scope.monthDate = new Date(bulanBulan(countGesture));
 	}
 
 	scope.onSwipeRight =function() {
 		countGesture--;
-		Service.slideInSmooth();
+		Service.slideInSmooth('#content-m');
 		scope.monthMonth = bulanBulan(countGesture);
 		scope.monthDate = new Date(bulanBulan(countGesture));
 	}

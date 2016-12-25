@@ -9,7 +9,6 @@ Service.$inject = ['$rootScope','$ionicPopover'];
 function Service (rootScope,ionicPopover) {
 
 	var animation = 'slide-in-up';
-	var element = angular.element(document.querySelector('#content'));
 
 	return {
 		popOver: function() {
@@ -20,7 +19,8 @@ function Service (rootScope,ionicPopover) {
 				rootScope.popover = popover;
 			});
 		},
-		slideInSmooth: function() {
+		slideInSmooth: function(elementId) {
+			var element = angular.element(document.querySelector(elementId));
 			element.addClass('slide-in-smooth');
 			setTimeout(function() {
 				element.removeClass('slide-in-smooth');
